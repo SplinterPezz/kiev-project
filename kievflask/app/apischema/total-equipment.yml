@@ -1,0 +1,18 @@
+Example endpoint returning the list of equipment values
+---
+parameters:
+  - name: days
+    in: path
+    type: int
+    required: true
+    default: 1
+  - name: sum_type
+    in: path
+    type: string
+    enum: ['sum', 'sub']
+    required: true
+    default: None
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/Chart'

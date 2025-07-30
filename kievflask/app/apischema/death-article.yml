@@ -1,0 +1,12 @@
+Example endpoint returning the list of Articles Death values
+---
+parameters:
+  - name: days
+    in: path
+    type: int
+    required: true
+    default: 1
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/Chart'

@@ -1,0 +1,148 @@
+Init of api doc root
+---
+definitions:
+#######################################
+#           COMMON OBJECTS
+#######################################
+
+    TagObject:
+        type: object
+        properties:
+            x:
+                type: string
+            y:
+                type: integer
+    
+    TreeTagSerie:
+        type: object
+        properties:
+            data:
+                type: array
+                items:
+                    $ref: '#/definitions/TagObject'
+            name:
+                type: string
+
+    Serie:
+        type: object
+        properties:
+            data:
+                type: array
+                items:
+                    $ref: '#/definitions/Value'
+            name:
+                type: string
+    Days:
+        type: string
+    
+    Value:
+        type: integer
+    
+    Meme:
+        type: string
+
+#######################################
+#              COMMON CHART
+#######################################
+
+    Chart:
+        type: object
+        properties:
+            series:
+                type: array
+                items:
+                    $ref: '#/definitions/Serie'
+            xaxis:
+                type: object
+                properties:
+                    categories:
+                        type: array
+                        items:
+                            $ref: '#/definitions/Days'
+
+#######################################
+#              DEATH EQUIPMENT
+#######################################
+
+    DeathEquipment:
+        type: object
+        properties:
+            equipment:
+                type : object
+                properties:
+                    series:
+                        type: array
+                        items:
+                            $ref: '#/definitions/Serie'
+                    xaxis:
+                        type: object
+                        properties:
+                            categories:
+                                type: array
+                                items:
+                                    $ref: '#/definitions/Days'
+            human:
+                type : object
+                properties:
+                    series:
+                        type: array
+                        items:
+                            $ref: '#/definitions/Serie'
+                    xaxis:
+                        type: object
+                        properties:
+                            categories:
+                                type: array
+                                items:
+                                    $ref: '#/definitions/Days'
+
+#######################################
+#              FIRE POWER
+#######################################
+
+    FirePower:
+        type: object
+        properties:
+            power:
+                type : object
+                properties:
+                    series:
+                        type: array
+                        items:
+                            $ref: '#/definitions/Serie'
+                    xaxis:
+                        type: object
+                        properties:
+                            categories:
+                                type: array
+                                items:
+                                    $ref: '#/definitions/Days'
+            resources:
+                type : object
+                properties:
+                    series:
+                        type: array
+                        items:
+                            $ref: '#/definitions/Serie'
+                    xaxis:
+                        type: object
+                        properties:
+                            categories:
+                                type: array
+                                items:
+                                    $ref: '#/definitions/Days'
+
+#######################################
+#              TREE TAG
+#######################################
+
+    TreeTag:
+        trype: array
+        items:
+            $ref: '#/definitions/TreeTagSerie'
+    
+responses:
+  200:
+    description: what???
+    schema:
+      $ref: '#/definitions/Meme'

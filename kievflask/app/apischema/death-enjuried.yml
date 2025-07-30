@@ -1,0 +1,18 @@
+Example endpoint returning the list of Enjuried values
+---
+parameters:
+  - name: type
+    in: path
+    type: string
+    enum: ['death', 'enjuried']
+    required: true
+    default: None
+  - name: days
+    in: path
+    type: int
+    required: true
+    default: 1
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/Chart'

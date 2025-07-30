@@ -1,0 +1,6 @@
+Example endpoint returning the list of Refugees daily
+---
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/Chart'

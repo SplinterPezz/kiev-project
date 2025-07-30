@@ -1,0 +1,12 @@
+Example endpoint returning the list of deeath and equipment values returning 2 charts
+---
+parameters:
+  - name: days
+    in: path
+    type: int
+    required: true
+    default: 1
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/DeathEquipment'

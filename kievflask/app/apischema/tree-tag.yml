@@ -1,0 +1,12 @@
+Example endpoint returning the list of most commont keyword on articles by dates
+---
+parameters:
+  - name: days
+    in: path
+    type: int
+    required: true
+    default: 1
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/TreeTag'

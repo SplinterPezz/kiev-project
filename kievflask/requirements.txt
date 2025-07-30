@@ -1,0 +1,12 @@
+bs4
+setuptools
+flasgger
+flask
+flask_cors
+flask_pymongo
+json_util
+livereload
+marshmallow
+marshmallow_jsonapi
+pandas
+requests

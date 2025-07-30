@@ -1,0 +1,7 @@
+Example endpoint returning the list of firepower by nations
+---
+
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/FirePower'
